@@ -90,3 +90,117 @@
 // }
 //
 // myFunction();
+//
+// function isBlank(string) {
+//   return !string ? true : false;
+// }
+//
+// isBlank('mars'); // false
+// isBlank('  ');   // false
+// isBlank('');     // true
+
+// let foo = 'launch school tech & talk';
+//
+// function capitalize(string) {
+//   let arr = string.split(' ');
+//
+//   for (let i = 0; i < arr.length; i++){
+//     arr[i] = arr[i][0].toUpperCase() + arr[i].substring(1);
+//   }
+//
+//   return arr.join(' ');
+// }
+//
+// console.log(capitalize(foo));
+
+// let passcode = ['11', 'jZ5', 'hQ3f*', '8!7g3', 'p3Fs'];
+//
+// console.log(passcode.join('-'));
+
+// function catAge(number) {
+//   switch (number) {
+//     case 0:
+//     case 1: return 15;
+//     case 2: return 24;
+//     default:
+//       return ((number - 2) * 4) + 24;
+//   }
+// }
+//
+// console.log(catAge(1));
+
+// removeLastChar = (string) => string.substring(0, string.length - 1);
+//
+// console.log(removeLastChar('ciao!'));
+
+// const template = 'I VERB NOUN.';
+//
+// let sentence = (verb, noun) => template.replace('VERB', verb).replace('NOUN', noun);
+//
+// console.log(sentence('like', 'birds'));
+
+// let initGame = () => ({level: 1, score: 0});
+//
+// let game = initGame();
+//
+// console.log('Level: ' + game.level);
+// console.log('Score: ' + game.score);
+
+// let jane = {
+//   firstName: 'Jane',
+//   lastName: 'Harrelson',
+//   age: 32,
+//   location: {
+//     country: 'Denmark',
+//     city: 'Aarhus'
+//   },
+//   occupation: 'engineer',
+//   greet: function(name) {
+//     console.log(`Hej, ${name}`);
+//   }
+// };
+//
+// jane.greet('Bobby');
+
+// let vehicle = {
+//   manufacturer: 'Tesla',
+//   model: 'Model X',
+//   year: 2015,
+//   range: 295,
+//   seats: 7
+// };
+//
+// let arr = [];
+//
+// for (let prop in vehicle) {
+//   arr.push(prop);
+// }
+//
+// console.log(arr);
+
+// let nestedArray = [['title', 'Duke'], ['name', 'Nukem'], ['age', 33]];
+// let obj = {};
+//
+// for (let i = 0; i < nestedArray.length; i++) {
+//   let prop = nestedArray[i][0]
+//   obj[prop] = nestedArray[i][1];
+// }
+//
+// console.log(obj);
+
+function clone(obj) {
+  return Object.assign({}, obj);
+}
+
+let person = {
+  title: 'Duke',
+  name: 'Nukem',
+  age: 33
+};
+
+let clonedPerson = clone(person);
+person.age = 34;
+console.log(clonedPerson);
+
+console.log(person.age);       // 34
+console.log(clonedPerson.age); // 33
